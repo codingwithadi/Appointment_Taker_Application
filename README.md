@@ -28,7 +28,7 @@ add data ->
 {
     "userName" : "Aditya Shinde",
     "userEmail" : "adityarshinde1999@gmail.com",
-    "userMobileNumber" : "9689729099",
+    "userMobileNumber" : "Number",
     "userWhatsAppNumber" : "Your_WhatsApp_Number",
     "userPassword" : "Your_Password@123"
 }
@@ -40,7 +40,7 @@ localhost:9002/api/user/updateUser/{userId}
 update data ->
 {
     "userName" : "Rahul Mohite",
-    "userEmail" : "rahul@yahoo.com",
+    "userEmail" : "updated_email_Id",
     "userMobileNumber" : "User_Number",
     "userWhatsAppNumber" : "User_WhatsApp_Number",
     "userPassword" : "rahul@123"
