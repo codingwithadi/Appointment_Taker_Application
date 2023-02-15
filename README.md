@@ -1,24 +1,30 @@
 # Appointment_Taker_Application
 
 
--> It is the basic Appointment Taker Application using the Java SpringBoot framework.
--> In this application, users/customers can register themselves, and create an appointment for their reasons or treatment.
--> Users/Customers can modify their information. For these features, this application uses CRUD operation.
--> So, this application is for creating your appointment for any kind. And admin or owner can check this appointment and user information for their work.
+1) -> It is the basic Appointment Taker Application using the Java SpringBoot framework.
+2) -> In this application, users/customers can register themselves, and create an appointment for their reasons or treatment.
+3) -> Users/Customers can modify their information. For these features, this application uses CRUD operation.
+4) -> So, this application is for creating your appointment for any kind. And admin or owner can check this appointment and user information for their work.
+
+---------------------------------------------------------------------------------------------------------
 
 -> Requirement for this application
 1) Java -> 17
-2) SpringBoot -> 3.0.2 version
+2) SpringBoot -> (3.0.2 version) -> 
 The dependency you should add -> Spring Web, Spring Data JPA, MySQL Driver, spring-boot-starter-validation, model mapper, and Lombok.
 3) MySQL Database -> in DB workbench create schema -> with name appointment_taker
 4) Postman Client-> for test REST API
 
+----------------------------------------------------------------------------------------------------------
 
-Application REST APIs ->
-In Postman Client ->
-Request From User ->
+* Application REST APIs ->
+* In Postman Client ->
+* Request From User ->
 
-User APIs ->
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+* User APIs ->
 
 1) create user -> 
 
@@ -58,9 +64,10 @@ localhost:9002/api/user/admin/getAllUser
 
 localhost:9002/api/user/deleteUser/{userId}
 
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
 
-
-Appointment APIs ->
+* Appointment APIs ->
 
 1) create appointment ->
 
