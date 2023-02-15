@@ -2,7 +2,7 @@ package com.appointment.taker.app.payload;
 
 import java.util.Date;
 
-import com.appointment.taker.app.entities.User;
+
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
@@ -12,6 +12,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class AppointmentDTO {
 
     private int appointmentId;
