@@ -23,46 +23,45 @@ import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
-	
-	//User services
+
+	// User services
 	@Autowired
 	private UserServices userService;
-	
-	//Post Method for User Creation
+
+	// Post Method for User Creation
 	@PostMapping("/createUser")
-	public ResponseEntity<UserDTO> createUser(@Valid @RequestBody UserDTO userDto){
+	public ResponseEntity<UserDTO> createUser(@Valid @RequestBody UserDTO userDto) {
 		UserDTO createdUser = this.userService.createUser(userDto);
 		return new ResponseEntity<UserDTO>(createdUser, HttpStatus.CREATED);
 	}
-	
-	//Put method for User Updation
+
+	// Put method for User Updation
 	@PutMapping("/updateUser/{userId}")
-	public ResponseEntity<UserDTO> updateUser(@Valid @RequestBody UserDTO userDto, @PathVariable("userId") Integer userId){
+	public ResponseEntity<UserDTO> updateUser(@Valid @RequestBody UserDTO userDto,
+			@PathVariable("userId") Integer userId) {
 		UserDTO updatedUser = this.userService.updateUser(userDto, userId);
 		return new ResponseEntity<UserDTO>(updatedUser, HttpStatus.OK);
 	}
-	
-	//Get method for Get User By Id
+
+	// Get method for Get User By Id
 	@GetMapping("/getUser/{userId}")
-	public ResponseEntity<UserDTO> getUserById(@PathVariable("userId") Integer userId){
+	public ResponseEntity<UserDTO> getUserById(@PathVariable("userId") Integer userId) {
 		UserDTO gotUser = this.userService.getUserById(userId);
 		return new ResponseEntity<UserDTO>(gotUser, HttpStatus.OK);
 	}
-	
-	//Get method for Get All User :: for Admin Access
+
+	// Get method for Get All User :: for Admin Access
 	@GetMapping("/admin/getAllUser")
-	public ResponseEntity<List<UserDTO>> getAllUser(){
+	public ResponseEntity<List<UserDTO>> getAllUser() {
 		List<UserDTO> allUsers = this.userService.getAllUser();
 		return new ResponseEntity<List<UserDTO>>(allUsers, HttpStatus.OK);
 	}
-	
-	//Delete method for Delete User
+
+	// Delete method for Delete User
 	@DeleteMapping("/deleteUser/{userId}")
-	public ResponseEntity<ApiResponse> deleteUser(@PathVariable("userId") Integer userId){
+	public ResponseEntity<ApiResponse> deleteUser(@PathVariable("userId") Integer userId) {
 		this.userService.deleteUser(userId);
 		return new ResponseEntity<ApiResponse>(new ApiResponse("User Deleted Successfully!!", true), HttpStatus.OK);
 	}
-	
-
 
 }

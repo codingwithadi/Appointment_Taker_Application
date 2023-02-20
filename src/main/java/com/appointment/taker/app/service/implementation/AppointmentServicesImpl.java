@@ -96,7 +96,8 @@ public class AppointmentServicesImpl implements AppointmentSevices {
 
 	@Override
 	public void deleteAppointment(Integer appointmentId) {
-		Appointment appointment = this.appointmentRepo.findById(appointmentId).orElseThrow(()-> new ResourceNotFoundException("Appointment", "ID", appointmentId));
+		Appointment appointment = this.appointmentRepo.findById(appointmentId)
+				.orElseThrow(() -> new ResourceNotFoundException("Appointment", "ID", appointmentId));
 		this.appointmentRepo.delete(appointment);
 	}
 

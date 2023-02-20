@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name="appointment")
+@Table(name = "appointment")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -23,12 +23,12 @@ public class Appointment {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int appointmentId;
-	
+
 	private String appointmentDate;
 	private String appointmentTime;
 	private String appointmentFor;
 	private Date appointmentSystemDate;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "user")
 	private User user;

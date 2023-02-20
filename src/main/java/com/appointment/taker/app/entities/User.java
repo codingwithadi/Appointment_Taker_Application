@@ -16,24 +16,23 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name="user")
+@Table(name = "user")
 @Getter
 @Setter
 @NoArgsConstructor
 public class User {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int userId;
-	
+
 	private String userName;
 	private String userEmail;
 	private String userMobileNumber;
 	private String userWhatsAppNumber;
 	private String userPassword;
-	
+
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private List<Appointment> appointment = new ArrayList<>();
-	
-	
+
 }

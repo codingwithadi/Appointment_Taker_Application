@@ -5,20 +5,20 @@ import java.util.List;
 import com.appointment.taker.app.payload.UserDTO;
 
 public interface UserServices {
-	
-	//create
+
+	// create
 	UserDTO createUser(UserDTO userDto);
-	
-	//update
+
+	// update
 	UserDTO updateUser(UserDTO userDto, Integer userId);
-	
-	//getById
+
+	// getById
 	UserDTO getUserById(Integer userId);
-	
-	//getAll
+
+	// getAll
 	List<UserDTO> getAllUser();
-	
-	//delete
+
+	// delete
 	void deleteUser(Integer userId);
 
 }

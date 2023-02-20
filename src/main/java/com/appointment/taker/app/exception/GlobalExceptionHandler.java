@@ -17,7 +17,7 @@ public class GlobalExceptionHandler {
 
 	// Handle All Exception in Controller
 	// ExceptionHandler is handle specific exception class or method
-	
+
 	@ExceptionHandler(ResourceNotFoundException.class)
 	public ResponseEntity<ApiResponse> resourceNotFoundExceptionHandler(ResourceNotFoundException ex) {
 

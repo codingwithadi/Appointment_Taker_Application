@@ -10,10 +10,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ApiResponse {
-	
+
 	private String responseStatus;
 	private boolean responseResult;
-	
-	
 
 }
